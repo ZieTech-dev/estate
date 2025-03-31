@@ -1,63 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Définir les actions d'abord -->
+    <!-- Actions -->
     <record id="action_estate_propriete" model="ir.actions.act_window">
         <field name="name">Propriétés</field>
         <field name="res_model">estate.propriete</field>
-        <field name="view_mode">form</field>
-        <field name="view_id" ref="view_estate_propriete_form"/>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="view_estate_propriete_kanban"/>
     </record>
 
     <record id="action_estate_location" model="ir.actions.act_window">
         <field name="name">Locations</field>
         <field name="res_model">estate.location</field>
-        <field name="view_mode">form</field>
-        <field name="view_id" ref="view_estate_location_form"/>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="view_estate_location_kanban"/>
     </record>
 
     <record id="action_estate_intervention" model="ir.actions.act_window">
         <field name="name">Interventions</field>
         <field name="res_model">estate.intervention</field>
-        <field name="view_mode">form</field>
-        <field name="view_id" ref="view_estate_intervention_form"/>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="view_estate_intervention_kanban"/>
     </record>
 
     <record id="action_estate_etat_des_lieux" model="ir.actions.act_window">
         <field name="name">États des lieux</field>
         <field name="res_model">estate.etat.des.lieux</field>
-        <field name="view_mode">form</field>
-        <field name="view_id" ref="view_estate_etat_des_lieux_form"/>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="view_estate_etat_des_lieux_kanban"/>
     </record>
 
     <record id="action_estate_piece" model="ir.actions.act_window">
         <field name="name">Pièces</field>
         <field name="res_model">estate.piece</field>
-        <field name="view_mode">form</field>
-        <field name="view_id" ref="view_estate_piece_form"/>
+        <field name="view_mode">kanban,form</field>
+        <!-- <field name="view_id" ref="view_estate_piece_kanban"/> -->
     </record>
 
     <record id="action_estate_commodite" model="ir.actions.act_window">
         <field name="name">Commodités</field>
         <field name="res_model">estate.commodite</field>
-        <field name="view_mode">form</field>
-        <field name="view_id" ref="view_estate_commodite_form"/>
+        <field name="view_mode">kanban,form</field>
+        <!-- <field name="view_id" ref="view_estate_commodite_kanban"/> -->
     </record>
 
     <record id="action_estate_type_piece" model="ir.actions.act_window">
         <field name="name">Types de Pièces</field>
         <field name="res_model">estate.type.piece</field>
-        <field name="view_mode">form</field>
-        <field name="view_id" ref="view_estate_type_piece_form"/>
+        <field name="view_mode">kanban,form</field>
+        <!-- <field name="view_id" ref="view_estate_type_piece_kanban"/> -->
     </record>
 
     <record id="action_estate_type_propriete" model="ir.actions.act_window">
         <field name="name">Types de Propriétés</field>
         <field name="res_model">estate.type.propriete</field>
-        <field name="view_mode">form</field>
-        <field name="view_id" ref="view_estate_type_propriete_form"/>
+        <field name="view_mode">kanban,form</field>
+        <!-- <field name="view_id" ref="view_estate_type_propriete_kanban"/> -->
     </record>
 
-    <!-- Ensuite, définir les menus -->
+    <!-- Menus -->
     <menuitem id="menu_estate_root" name="Gestion Immobilière" sequence="10"/>
     <menuitem id="menu_estate_propriete" parent="menu_estate_root" name="Propriétés" action="action_estate_propriete"/>
     <menuitem id="menu_estate_location" parent="menu_estate_root" name="Locations" action="action_estate_location"/>

@@ -16,4 +16,5 @@ class EtatDesLieux(models.Model):
     date = fields.Datetime(default=datetime.now())
     responsable_id = fields.Many2one('res.users', string='Responsable', required=True)
     location_id = fields.Many2one('estate.location', "Location")
+    etat_general = fields.Char(string='État Général')
 
