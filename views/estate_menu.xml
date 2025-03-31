@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Définir les actions d'abord -->
+    <record id="action_estate_propriete" model="ir.actions.act_window">
+        <field name="name">Propriétés</field>
+        <field name="res_model">estate.propriete</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_estate_propriete_form"/>
+    </record>
+
+    <record id="action_estate_location" model="ir.actions.act_window">
+        <field name="name">Locations</field>
+        <field name="res_model">estate.location</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_estate_location_form"/>
+    </record>
+
+    <record id="action_estate_intervention" model="ir.actions.act_window">
+        <field name="name">Interventions</field>
+        <field name="res_model">estate.intervention</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_estate_intervention_form"/>
+    </record>
+
+    <record id="action_estate_etat_des_lieux" model="ir.actions.act_window">
+        <field name="name">États des lieux</field>
+        <field name="res_model">estate.etat.des.lieux</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_estate_etat_des_lieux_form"/>
+    </record>
+
+    <record id="action_estate_piece" model="ir.actions.act_window">
+        <field name="name">Pièces</field>
+        <field name="res_model">estate.piece</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_estate_piece_form"/>
+    </record>
+
+    <record id="action_estate_commodite" model="ir.actions.act_window">
+        <field name="name">Commodités</field>
+        <field name="res_model">estate.commodite</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_estate_commodite_form"/>
+    </record>
+
+    <record id="action_estate_type_piece" model="ir.actions.act_window">
+        <field name="name">Types de Pièces</field>
+        <field name="res_model">estate.type.piece</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_estate_type_piece_form"/>
+    </record>
+
+    <record id="action_estate_type_propriete" model="ir.actions.act_window">
+        <field name="name">Types de Propriétés</field>
+        <field name="res_model">estate.type.propriete</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_estate_type_propriete_form"/>
+    </record>
+
+    <!-- Ensuite, définir les menus -->
+    <menuitem id="menu_estate_root" name="Gestion Immobilière" sequence="10"/>
+    <menuitem id="menu_estate_propriete" parent="menu_estate_root" name="Propriétés" action="action_estate_propriete"/>
+    <menuitem id="menu_estate_location" parent="menu_estate_root" name="Locations" action="action_estate_location"/>
+    <menuitem id="menu_estate_intervention" parent="menu_estate_root" name="Interventions" action="action_estate_intervention"/>
+    <menuitem id="menu_estate_etat_des_lieux" parent="menu_estate_root" name="États des lieux" action="action_estate_etat_des_lieux"/>
+    <menuitem id="menu_estate_piece" parent="menu_estate_root" name="Pièces" action="action_estate_piece"/>
+    <menuitem id="menu_estate_commodite" parent="menu_estate_root" name="Commodités" action="action_estate_commodite"/>
+    <menuitem id="menu_estate_config" parent="menu_estate_root" name="Configuration" sequence="100">
+        <menuitem id="menu_estate_type_piece" name="Types de Pièces" action="action_estate_type_piece"/>
+        <menuitem id="menu_estate_type_propriete" name="Types de Propriétés" action="action_estate_type_propriete"/>
+    </menuitem>
+</odoo>

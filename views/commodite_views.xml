@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_estate_commodite_form" model="ir.ui.view">
+        <field name="name">estate.commodite.form</field>
+        <field name="model">estate.commodite</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Commodité">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="piece_id"/>
+                        <field name="propriete_id" readonly="1"/>
+                        <field name="image" widget="image"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

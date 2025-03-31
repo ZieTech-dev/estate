@@ -5,7 +5,7 @@
     'summary': "Short (1 phrase/line) summary of the module's purpose",
 
     'description': """
-Long description of module's purpose
+    Module de gestion immobilière
     """,
 
     'author': "My Company",
@@ -18,17 +18,27 @@ Long description of module's purpose
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'mail'],
+    'external_dependencies': {'python': ['python-dateutil']},
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/ir.model.access.csv',  # À créer si nécessaire
+        'data/estate_intervention_sequence.xml',  # Séquence pour Intervention
+        'data/estate_location_sequence.xml',      # Séquence pour Location
+        'views/commodite_views.xml',
+        'views/etat_des_lieux_views.xml',
+        'views/intervention_views.xml',
+        'views/location_views.xml',
+        'views/partner_views.xml',
+        'views/piece_views.xml',
+        'views/propriete_views.xml',
+        'views/type_piece_views.xml',
+        'views/type_propriete_views.xml',
+        'views/estate_menu.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    
+    'application': True,
 }
 

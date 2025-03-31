@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_estate_type_piece_form" model="ir.ui.view">
+        <field name="name">estate.type.piece.form</field>
+        <field name="model">estate.type.piece</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Type de Pièce">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                    <group>
+                        <field name="pieces_ids" widget="one2many_list"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

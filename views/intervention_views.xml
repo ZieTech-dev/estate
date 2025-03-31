@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_estate_intervention_form" model="ir.ui.view">
+        <field name="name">estate.intervention.form</field>
+        <field name="model">estate.intervention</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Intervention">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="propriete_id"/>
+                        <field name="piece_id"/>
+                        <field name="description"/>
+                        <field name="date_prevue"/>
+                        <field name="date_realisation"/>
+                        <field name="responsable_id"/>
+                        <field name="cout_estime"/>
+                        <field name="cout_reel"/>
+                        <field name="etat"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_estate_etat_des_lieux_form" model="ir.ui.view">
+        <field name="name">estate.etat.des.lieux.form</field>
+        <field name="model">estate.etat.des.lieux</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="État des lieux">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="type"/>
+                        <field name="date"/>
+                        <field name="responsable_id"/>
+                        <field name="location_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

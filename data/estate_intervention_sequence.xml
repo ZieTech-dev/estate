@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sequence_intervention" model="ir.sequence">
+        <field name="name">Intervention Sequence</field>
+        <field name="code">estate.intervention</field>
+        <field name="prefix">INT/</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+</odoo>

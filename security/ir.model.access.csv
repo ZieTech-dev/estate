@@ -1,2 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_estate_estate,estate.estate,model_estate_estate,base.group_user,1,1,1,1
+access_estate_propriete,estate.propriete.access,model_estate_propriete,base.group_user,1,1,1,1
+access_estate_piece,estate.piece.access,model_estate_piece,base.group_user,1,1,1,1
+access_estate_commodite,estate.commodite.access,model_estate_commodite,base.group_user,1,1,1,1
+access_estate_location,estate.location.access,model_estate_location,base.group_user,1,1,1,1
+access_estate_intervention,estate.intervention.access,model_estate_intervention,base.group_user,1,1,1,1
+access_estate_etat_des_lieux,estate.etat.des.lieux.access,model_estate_etat_des_lieux,base.group_user,1,1,1,1
+access_estate_type_piece,estate.type.piece.access,model_estate_type_piece,base.group_user,1,1,1,1
+access_estate_type_propriete,estate.type.propriete.access,model_estate_type_propriete,base.group_user,1,1,1,1
