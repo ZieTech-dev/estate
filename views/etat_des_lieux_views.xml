@@ -19,21 +19,42 @@
         </field>
     </record>
 
+    <record id="view_estate_etat_des_lieux_list" model="ir.ui.view">
+        <field name="name">estate.etat.des.lieux.list</field>
+        <field name="model">estate.etat.des.lieux</field>
+        <field name="arch" type="xml">
+            <list string="États des lieux">
+                <field name="name" string="Numéro"/>
+                <field name="type" string="Type"/>
+                <field name="date" string="Date"/>
+                <field name="responsable_id" string="Responsable"/>
+                <field name="location_id" string="Location"/>
+                <field name="etat_general" string="État Général"/>
+            </list>
+        </field>
+    </record>
+
     <record id="view_estate_etat_des_lieux_kanban" model="ir.ui.view">
         <field name="name">estate.etat.des.lieux.kanban</field>
         <field name="model">estate.etat.des.lieux</field>
         <field name="arch" type="xml">
             <kanban>
-                <field name="location_id"/>
+                <field name="name"/>
+                <field name="type"/>
                 <field name="date"/>
-                <field name="etat_general"/>  <!-- Assure-toi que ce champ existe -->
+                <field name="responsable_id"/>
+                <field name="location_id"/>
+                <field name="etat_general"/>
                 <templates>
-                    <t t-name="card">  <!-- Changement de "kanban-box" à "card" -->
+                    <t t-name="card">
                         <div class="oe_kanban_card">
                             <div class="oe_kanban_details">
-                                <strong><field name="location_id"/></strong><br/>
+                                <strong><field name="name"/></strong><br/>
+                                <span>Type: <field name="type"/></span><br/>
                                 <span>Date: <field name="date"/></span><br/>
-                                <span>État: <field name="etat_general"/></span>
+                                <span>Responsable: <field name="responsable_id"/></span><br/>
+                                <span>Location: <field name="location_id"/></span><br/>
+                                <span>État Général: <field name="etat_general"/></span>
                             </div>
                         </div>
                     </t>

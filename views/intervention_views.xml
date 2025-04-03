@@ -24,22 +24,53 @@
         </field>
     </record>
 
+    <record id="view_estate_intervention_list" model="ir.ui.view">
+        <field name="name">estate.intervention.list</field>
+        <field name="model">estate.intervention</field>
+        <field name="arch" type="xml">
+            <list string="Interventions">
+                <field name="name" string="Numéro"/>
+                <field name="propriete_id" string="Propriété"/>
+                <field name="piece_id" string="Pièce"/>
+                <field name="description" string="Description"/>
+                <field name="date_prevue" string="Date prévue"/>
+                <field name="date_realisation" string="Date de réalisation"/>
+                <field name="responsable_id" string="Responsable"/>
+                <field name="cout_estime" string="Coût estimé (€)"/>
+                <field name="cout_reel" string="Coût réel (€)"/>
+                <field name="etat" string="État"/>
+            </list>
+        </field>
+    </record>
+
     <record id="view_estate_intervention_kanban" model="ir.ui.view">
         <field name="name">estate.intervention.kanban</field>
         <field name="model">estate.intervention</field>
         <field name="arch" type="xml">
             <kanban>
-                <field name="name"/>  <!-- Remplace "numero" -->
-                <field name="propriete_id"/>  <!-- Remplace "location_id" -->
-                <field name="date_prevue"/>  <!-- Remplace "date_intervention" -->
-                <field name="etat"/>  <!-- Ajouté pour plus d’info -->
+                <field name="name"/>
+                <field name="propriete_id"/>
+                <field name="piece_id"/>
+                <field name="description"/>
+                <field name="date_prevue"/>
+                <field name="date_realisation"/>
+                <field name="responsable_id"/>
+                <field name="cout_estime"/>
+                <field name="cout_reel"/>
+                <field name="etat"/>
                 <templates>
                     <t t-name="card">
                         <div class="oe_kanban_card">
                             <div class="oe_kanban_details">
                                 <strong><field name="name"/></strong><br/>
                                 <span>Propriété: <field name="propriete_id"/></span><br/>
+                                <span>Pièce: <field name="piece_id"/></span><br/>
+                                <span>Description: <field name="description"/></span><br/>
                                 <span>Date prévue: <field name="date_prevue"/></span><br/>
+                                <span>Date réalisée: <field name="date_realisation"/></span><br/>
+                                <span>Responsable: <field name="responsable_id"/></span><br/>
+                                <span>Coût estimé: <field name="cout_estime"/> €</span><br/>
+                                <span>Coût réel: <field name="cout_reel"/> €</span><br/>
                                 <span>État: <field name="etat"/></span>
                             </div>
                         </div>

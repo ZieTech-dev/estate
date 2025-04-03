@@ -28,11 +28,11 @@
         <field name="model">estate.propriete</field>
         <field name="arch" type="xml">
             <kanban>
-                <field name="name"/>  <!-- Correct -->
-                <field name="type_id"/>  <!-- Remplace "type_propriete_id" -->
-                <field name="superficie"/>  <!-- Remplace "surface" -->
-                <field name="loyer_mensuel"/>  <!-- Remplace "prix" -->
-                <field name="etat"/>  <!-- Ajouté pour plus d’info -->
+                <field name="name"/>  
+                <field name="type_id"/>  
+                <field name="superficie"/> 
+                <field name="loyer_mensuel"/>  
+                <field name="etat"/>  
                 <templates>
                     <t t-name="card">
                         <div class="oe_kanban_card">
@@ -47,6 +47,20 @@
                     </t>
                 </templates>
             </kanban>
+        </field>
+    </record>
+
+    <record id="view_estate_propriete_list" model="ir.ui.view">
+        <field name="name">estate.propriete.list</field>
+        <field name="model">estate.propriete</field>
+        <field name="arch" type="xml">
+            <list string="Propriétés">
+                <field name="name" string="Nom"/>
+                <field name="type_id" string="Type"/>
+                <field name="superficie" string="Superficie (m²)"/>
+                <field name="loyer_mensuel" string="Loyer mensuel (€)"/>
+                <field name="etat" string="État"/>
+            </list>
         </field>
     </record>
 </odoo>

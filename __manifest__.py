@@ -17,15 +17,15 @@
     'category': 'Uncategorized',
     'version': '0.1',
 
-    # any module necessary for this one to work correctly
+    
     'depends': ['base', 'mail'],
     'external_dependencies': {'python': ['python-dateutil']},
 
-    # always loaded
+    
     'data': [
-        'security/ir.model.access.csv',  # À créer si nécessaire
-        'data/estate_intervention_sequence.xml',  # Séquence pour Intervention
-        'data/estate_location_sequence.xml',      # Séquence pour Location
+        'security/ir.model.access.csv',  
+        'data/estate_intervention_sequence.xml',  
+        'data/estate_location_sequence.xml',      
         'views/commodite_views.xml',
         'views/etat_des_lieux_views.xml',
         'views/intervention_views.xml',
@@ -37,7 +37,7 @@
         'views/type_propriete_views.xml',
         'views/estate_menu.xml',
     ],
-    # only loaded in demonstration mode
+   
     
     'application': True,
 }

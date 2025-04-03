@@ -27,24 +27,57 @@
         </field>
     </record>
 
+    <record id="view_estate_location_list" model="ir.ui.view">
+        <field name="name">estate.location.list</field>
+        <field name="model">estate.location</field>
+        <field name="arch" type="xml">
+            <list string="Locations">
+                <field name="name" string="Numéro"/>
+                <field name="locataire_id" string="Locataire"/>
+                <field name="propriete_id" string="Propriété"/>
+                <field name="date_de_reservation" string="Date de réservation"/>
+                <field name="date_de_debut" string="Date de début"/>
+                <field name="duree_en_annee" string="Durée (années)"/>
+                <field name="date_de_fin" string="Date de fin"/>
+                <field name="frequence" string="Fréquence de paiement"/>
+                <field name="loyer" string="Loyer (€)"/>
+                <field name="etat" string="État"/>
+                <field name="etats_des_lieux_ids" string="États des lieux"/>
+            </list>
+        </field>
+    </record>
+
     <record id="view_estate_location_kanban" model="ir.ui.view">
         <field name="name">estate.location.kanban</field>
         <field name="model">estate.location</field>
         <field name="arch" type="xml">
             <kanban>
-                <field name="name"/>  <!-- Remplace "numero" -->
-                <field name="propriete_id"/>
+                <field name="name"/>
                 <field name="locataire_id"/>
-                <field name="loyer"/>  <!-- Remplace "loyer_mensuel" -->
-                <field name="etat"/>  <!-- Ajouté pour plus d’info -->
+                <field name="propriete_id"/>
+                <field name="date_de_reservation"/>
+                <field name="date_de_debut"/>
+                <field name="duree_en_annee"/>
+                <field name="date_de_fin"/>
+                <field name="frequence"/>
+                <field name="loyer"/>
+                <field name="etat"/>
+                <field name="etats_des_lieux_ids"/>
                 <templates>
                     <t t-name="card">
                         <div class="oe_kanban_card">
                             <div class="oe_kanban_details">
                                 <strong><field name="name"/></strong><br/>
-                                <span>Propriété: <field name="propriete_id"/></span><br/>
                                 <span>Locataire: <field name="locataire_id"/></span><br/>
-                                <span>Loyer: <field name="loyer"/> €/<field name="frequence"/></span>
+                                <span>Propriété: <field name="propriete_id"/></span><br/>
+                                <span>Réservation: <field name="date_de_reservation"/></span><br/>
+                                <span>Début: <field name="date_de_debut"/></span><br/>
+                                <span>Durée: <field name="duree_en_annee"/> ans</span><br/>
+                                <span>Fin: <field name="date_de_fin"/></span><br/>
+                                <span>Fréquence: <field name="frequence"/></span><br/>
+                                <span>Loyer: <field name="loyer"/> €</span><br/>
+                                <span>État: <field name="etat"/></span><br/>
+                                <span>États des lieux: <field name="etats_des_lieux_ids"/></span>
                             </div>
                         </div>
                     </t>
